@@ -1,23 +1,23 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
- module.exports = {
-   entry: {
+module.exports = {
+  entry: {
     index: './src/index.js',
     //  print: './src/print.js',
-   },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
   ],
-   output: {
-     filename: 'bundle.js',
-     path: path.resolve(__dirname, 'dist'),
-     clean: true,
-   },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
 
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -25,5 +25,5 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       },
     ],
   },
-  
- };
+
+};
