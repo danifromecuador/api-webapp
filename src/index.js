@@ -1,4 +1,4 @@
-// import './styles.css';
+import './styles.css';
 import { apiGet, sendLike, getLikes } from './modules/api.js';
 
 const mainBody = document.getElementById('main');
