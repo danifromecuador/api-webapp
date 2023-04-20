@@ -5,11 +5,11 @@ export const apiGet = async () => {
 };
 
 // getting the id of the involvment API
-export const involvementApiId = async (index) => {
+export const involvementApiId = async () => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
     method: 'POST',
   });
-  return 'D378r3vCLkaRvnEDLjsU';
+  return [response, 'D378r3vCLkaRvnEDLjsU'];
 };
 
 // sending likes to the involvment API using the unique id
@@ -23,6 +23,7 @@ export const sendLike = async (index) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
+  return response;
 };
 
 // getting likes from the involvement API
@@ -31,6 +32,5 @@ export const getLikes = async () => {
     method: 'GET',
   });
   const numberOfLikes = await response.json();
-  console.log(numberOfLikes);
   return numberOfLikes;
 };
