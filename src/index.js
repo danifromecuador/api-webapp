@@ -1,6 +1,6 @@
 import './styles.css';
 import {
-  apiGet, sendLike, getLikes, involvementApiGet,
+  apiGet, sendLike, getLikes, involvementApiGet, involvementApiPost,
 } from './modules/api.js';
 import {
   generateMovies, generatePopup, generateComments, generateNoComments,
@@ -44,6 +44,14 @@ window.addEventListener('load', async () => {
           document.getElementById('comments').innerHTML += generateComments(item);
         });
       }
+
+      document.getElementById('add-comment').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = document.getElementById('name').value;
+        const userComment = document.getElementById('comment-input').value;
+        await involvementApiPost(index + 1, username, userComment);
+        window.location.reload();
+      });
 
       document.getElementById('close-btn').addEventListener('click', () => {
         document.getElementById('modal').style.display = 'none';

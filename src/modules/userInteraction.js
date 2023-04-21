@@ -20,6 +20,12 @@ function generatePopup(info) {
             </div>
             <div id = "comments">
             </div>
+            <form id = "add-comment">
+              <p>Add a Comment</p>
+              <input placeholder = "Your name" type = 'text' id = 'name' required/>
+              <input placeholder = "Your comment" type = 'text' id = 'comment-input' required/>
+              <button type = 'submit' class = 'submit'>Comment<button/>
+            </form>
         </div>
     </div>
   `;
