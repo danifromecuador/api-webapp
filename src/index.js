@@ -6,6 +6,7 @@ import {
   generateMovies, generatePopup, generateComments, generateNoComments,
 } from './modules/userInteraction.js';
 import episodesCounter from './modules/episodesCounter.js';
+import commentCounter from './modules/commentsCounter.js';
 
 const mainBody = document.getElementById('main');
 const popup = document.getElementById('popup-window');
@@ -37,9 +38,11 @@ window.addEventListener('load', async () => {
 
       if (commentArray === null) {
         const comments = 0;
-        document.getElementById('comments').innerHTML = generateNoComments(comments);
+        const commentsCounter = commentCounter(comments);
+        document.getElementById('comments').innerHTML = generateNoComments(commentsCounter);
       } else {
-        document.getElementById('comments').innerHTML = `<h2 class = "comments-header">Comments(${commentArray.length})</h2>`;
+        const commentsCounter = commentCounter(commentArray);
+        document.getElementById('comments').innerHTML = `<h2 class = "comments-header">Comments(${commentsCounter})</h2>`;
         commentArray.forEach((item) => {
           document.getElementById('comments').innerHTML += generateComments(item);
         });
