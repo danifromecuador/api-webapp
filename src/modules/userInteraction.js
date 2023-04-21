@@ -23,17 +23,19 @@ function generatePopup(info) {
   `;
 }
 
-function generateMovies(episode) {
+function generateMovies (episode, likes) {
   return `
-    <div id = "episode-card-${episode.number}" class = "episode-card">
-      <div class = "episode-img" id = "episode-img-${episode.number}">
-        <img src = "${episode.image.medium}">
+    <div id="episode-card-${episode.number}" class="episode-card">
+      <div class="episode-img" id="episode-img-${episode.number}">
+        <img src="${episode.image.medium}">
       </div>
-      <div class = "episode-txt">
+      <div class="episode-txt">
         <p>Episode ${episode.number}</p>
-        <div class = "likes">
-          <div class = "like-btn-container"><img class = "like-btn" src = "/assets/unliked.png" alt = "unliked"></div>
-          <p class = "like-txt">5 likes</p>
+        <div class="likes">
+          <div class="like-btn-container">
+            <img class="like-btn" src="/assets/liked.png" alt="unliked">
+          </div>
+          <p class="like-txt">${likes}</p>
         </div>
       </div>
     </div>
