@@ -1,4 +1,4 @@
-const generatePopup = (info) => {
+function generatePopup(info) {
   return `
     <div id = "modal">
         <div id = "modal-content">
@@ -20,7 +20,7 @@ const generatePopup = (info) => {
             </div>
         </div>
     </div>
-  `
+  `;
 }
 
 function generateMovies(episode) {
@@ -43,4 +43,4 @@ function generateMovies(episode) {
 export {
   generatePopup,
   generateMovies,
-}
+};
