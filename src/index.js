@@ -3,6 +3,7 @@ import { apiGet, sendLike, getLikes } from './modules/api.js';
 import { generateMovies, generatePopup } from './modules/userInteraction.js';
 
 const mainBody = document.getElementById('main');
+const popup = document.getElementById('popup-window');
 
 window.addEventListener('load', async () => {
   const numberOfLikes = await getLikes();
