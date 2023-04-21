@@ -1,8 +1,8 @@
-import commentCounter from "../src/modules/commentsCounter";
+import commentCounter from '../src/modules/commentsCounter.js';
 
 describe('Testing for comments count', () => {
   it('Comments count test', () => {
-    let commentArray = [
+    const commentArray = [
       {
         created_date: '23-04-2023',
         username: 'Antwi',
@@ -24,8 +24,8 @@ describe('Testing for comments count', () => {
   });
 
   it('No Comments count test', () => {
-    let noComments = 0;
+    const noComments = 0;
     const output = commentCounter(noComments);
     expect(output).toBe(0);
   });
-})
+});
