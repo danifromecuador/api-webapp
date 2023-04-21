@@ -111,3 +111,79 @@ nav {
   margin-bottom: 2em;
   box-shadow: -1px 3px 3px -1px rgba(0, 0, 0, 0.7);
 }
+
+/***** POPUP WINDOW *****/
+
+#modal {
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: rgba(247, 246, 246, 0.796);
+  backdrop-filter: blur(10px);
+}
+
+#modal::-webkit-scrollbar {
+  display: none;
+}
+
+#modal-content {
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+#close-btn {
+  display: block;
+  width: 2em;
+  align-self: flex-end;
+}
+
+.original-img {
+  width: 100%;
+}
+
+.episode-name {
+  text-align: center;
+  margin: 0;
+}
+
+.episode-num {
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-left-col,
+.info-right-col {
+  width: 50%;
+}
+
+.info-left-col p,
+.info-right-col p {
+  margin: 0;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.info-left-col p:nth-child(even),
+.info-right-col p:nth-child(even) {
+  background-color: rgb(129, 244, 152);
+}
+
+.info-left-col p:nth-child(odd),
+.info-right-col p:nth-child(odd) {
+  background-color: rgb(247, 250, 253);
+}
