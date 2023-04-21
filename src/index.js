@@ -1,25 +1,9 @@
 import './styles.css';
 import { apiGet } from './modules/api.js';
+import { generateMovies, generatePopup } from './modules/userInteraction.js';
 
 const mainBody = document.getElementById('main');
 const popup = document.getElementById('popup-window');
-
-function generateMovies(episode) {
-  return `
-    <div id = "episode-card-${episode.number}" class = "episode-card">
-      <div class = "episode-img" id = "episode-img-${episode.number}">
-        <img src = "${episode.image.medium}">
-      </div>
-      <div class = "episode-txt">
-        <p>Episode ${episode.number}</p>
-        <div class = "likes">
-          <div class = "like-btn-container"><img class = "like-btn" src = "/assets/unliked.png" alt = "unliked"></div>
-          <p class = "like-txt">5 likes</p>
-        </div>
-      </div>
-    </div>
-  `;
-}
 
 window.addEventListener('load', async () => {
   const epiArray = await apiGet();
@@ -27,5 +11,16 @@ window.addEventListener('load', async () => {
     if (episode.season === 1) {
       mainBody.innerHTML += generateMovies(episode);
     }
+  });
+
+  const episodes = document.body.querySelectorAll('.episode-img');
+  Array.from(episodes).forEach((item, index) => {
+    item.addEventListener('click', async () => {
+      popup.innerHTML = generatePopup(epiArray[index]);
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('close-btn').addEventListener('click', () => {
+        document.getElementById('modal').style.display = 'none';
+      });
+    });
   });
 });
