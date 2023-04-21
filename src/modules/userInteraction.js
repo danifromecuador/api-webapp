@@ -18,12 +18,14 @@ function generatePopup(info) {
                 <p>rating: ${info.rating.average}</p>
               </div>
             </div>
+            <div id = "comments">
+            </div>
         </div>
     </div>
   `;
 }
 
-function generateMovies (episode, likes) {
+function generateMovies(episode, likes) {
   return `
     <div id="episode-card-${episode.number}" class="episode-card">
       <div class="episode-img" id="episode-img-${episode.number}">
@@ -42,7 +44,22 @@ function generateMovies (episode, likes) {
   `;
 }
 
+function generateNoComments(comments) {
+  return `
+    <h2 class = "comments-header">Comments(${comments})<h2>  
+    <p class = 'no-comments'>no comments</p>
+  `;
+}
+
+function generateComments(item) {
+  return `
+    <p class ="comment">${item.creation_date} ${item.username}: ${item.comment}</p>
+  `;
+}
+
 export {
   generatePopup,
   generateMovies,
+  generateNoComments,
+  generateComments,
 };

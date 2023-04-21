@@ -187,3 +187,15 @@ nav {
 .info-right-col p:nth-child(odd) {
   background-color: rgb(247, 250, 253);
 }
+
+/***** POPUP COMMENTS *****/
+
+.comments-header {
+  text-align: center;
+  font-weight: 300;
+}
+
+.no-comments {
+  font-weight: 300;
+  font-size: 0.8em;
+}
