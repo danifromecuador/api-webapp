@@ -1,11 +1,11 @@
-// import './styles.css';
+import './styles.css';
 import {
   apiGet, sendLike, getLikes, involvementApiGet,
 } from './modules/api.js';
 import {
   generateMovies, generatePopup, generateComments, generateNoComments,
 } from './modules/userInteraction.js';
-import { episodesCounter } from './modules/episodesCounter.js';
+import episodesCounter from './modules/episodesCounter.js';
 
 const mainBody = document.getElementById('main');
 const popup = document.getElementById('popup-window');

@@ -1,4 +1,4 @@
-export const episodesCounter = async () => {
+const episodesCounter = async () => {
   // episodeCard is the array of episodes that were dinamically created
   const episodeCard = document.querySelectorAll('.episode-card');
   // episodeCounter is the place got from HTML where the lenght of the array will be showed
@@ -6,3 +6,5 @@ export const episodesCounter = async () => {
   episodesCounter.innerHTML = `Total episodes: ${episodeCard.length}`;
   return episodeCard.length;
 };
+
+export default episodesCounter;
