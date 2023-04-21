@@ -199,3 +199,10 @@ nav {
   font-weight: 300;
   font-size: 0.8em;
 }
+
+
+/***** ITEMS COUNTER *****/
+.episodesCounter {
+  text-align: center;
+  padding: 20px;
+}
