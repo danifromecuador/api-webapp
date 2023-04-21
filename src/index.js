@@ -4,6 +4,7 @@ import { apiGet, sendLike, getLikes } from './modules/api.js';
 const mainBody = document.getElementById('main');
 // const popup = document.getElementById('popup-window');
 
+//here I'm rendering the page each time the user clicks on heart button
 const generateMovies = (episode, likes) => `
   <div id="episode-card-${episode.number}" class="episode-card">
     <div class="episode-img" id="episode-img-${episode.number}">
@@ -15,7 +16,7 @@ const generateMovies = (episode, likes) => `
         <div class="like-btn-container">
           <img class="like-btn" src="/assets/liked.png" alt="unliked">
         </div>
-        <p class="like-txt">${likes}</p>
+        <p class="like-txt">${likes}</p> 
       </div>
     </div>
   </div>
