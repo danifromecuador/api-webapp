@@ -1,7 +1,9 @@
 import './styles.css';
 import { apiGet, sendLike, getLikes } from './modules/api.js';
+import { generateMovies, generatePopup } from './modules/userInteraction.js';
 
 const mainBody = document.getElementById('main');
+
 // const popup = document.getElementById('popup-window');
 
 //here I'm rendering the page each time the user clicks on heart button
@@ -39,4 +41,15 @@ window.addEventListener('load', async () => {
       window.location.reload();
     });
   }
+
+  const episodes = document.body.querySelectorAll('.episode-img');
+  Array.from(episodes).forEach((item, index) => {
+    item.addEventListener('click', async () => {
+      popup.innerHTML = generatePopup(epiArray[index]);
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('close-btn').addEventListener('click', () => {
+        document.getElementById('modal').style.display = 'none';
+      });
+    });
+  });
 });
