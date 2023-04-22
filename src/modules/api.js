@@ -45,7 +45,7 @@ const involvementApiGet = async (id) => {
 };
 
 const involvementApiPost = async (id, username, comment) => {
-    await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1TzK26frOiLTOPOwesN3/comments', {
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1TzK26frOiLTOPOwesN3/comments', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
