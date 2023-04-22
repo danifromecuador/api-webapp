@@ -31,9 +31,7 @@ HTML, CSS, JavaScript with webpack and linter files
 - **[linter files(debugging tools)]**
 - **[ html, JavaScript and css template]**
 
-## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Movies API](https://danifromecuador.github.io/api-webapp/dist/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -67,9 +65,7 @@ N/A
 - LinkedIn: linkedin.com/in/eric-antwi-580650251
 
 ### Author 2
-- GitHub: [@danifromecuador](https://github.com/danifromecuador)
-- Twitter: [@danifromecuador](https://twitter.com/danifromecuador)
-- LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador/)
+- GitHub: [@Danifromecuador](https://github.com/Danifromecuador)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
