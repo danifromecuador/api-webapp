@@ -41,7 +41,7 @@ function generateMovies(episode, likes) {
         <p>Episode ${episode.number}</p>
         <div class="likes">
           <div class="like-btn-container">
-            <img class="like-btn" src="/assets/liked.png" alt="unliked">
+            <img class="like-btn" src="../assets/liked.png" alt="unliked">
           </div>
           <p class="like-txt">${likes}</p>
         </div>
