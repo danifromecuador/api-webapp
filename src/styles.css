@@ -120,6 +120,18 @@ nav {
   box-shadow: -1px 3px 3px -1px rgba(0, 0, 0, 0.7);
 }
 
+/***** FOOTER *****/
+footer {
+  background-color: rgb(87, 245, 98);
+  margin: 0;
+  padding: 1em;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
 /***** POPUP WINDOW *****/
 
 #modal {
@@ -243,17 +255,4 @@ nav {
   border-radius: 4px;
   padding: 0.5em;
   font-size: 1em;
-}
-
-/***** FOOTER *****/
-
-footer {
-  background-color: rgb(87, 245, 98);
-  margin: 0;
-  padding: 1em;
-}
-
-footer p {
-  text-align: center;
-  color: white;
 }
