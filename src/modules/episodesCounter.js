@@ -1,5 +1,3 @@
-const episodesCounter = async (episodeCard) => {  
-  return episodeCard.length;
-};
+const episodesCounter = async (episodeCard) => episodeCard.length;
 
 export default episodesCounter;

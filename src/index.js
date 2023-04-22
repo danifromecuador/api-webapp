@@ -1,4 +1,4 @@
-// import './styles.css';
+import './styles.css';
 import {
   apiGet, sendLike, getLikes, involvementApiGet, involvementApiPost,
 } from './modules/api.js';
@@ -29,13 +29,12 @@ window.addEventListener('load', async () => {
     });
   }
 
-  const episodeCard = document.querySelectorAll('.episode-card');  
+  const episodeCard = document.querySelectorAll('.episode-card');
   const episodeCardArray = Array.from(episodeCard);
-  console.log(episodeCardArray);
   episodesCounter(episodeCardArray);
   const episodesCounterDiv = document.querySelector('.episodesCounter');
   episodesCounterDiv.innerHTML = `Total episodes: ${episodeCard.length}`;
-  
+
   const episodes = document.body.querySelectorAll('.episode-img');
   Array.from(episodes).forEach((item, index) => {
     item.addEventListener('click', async () => {
