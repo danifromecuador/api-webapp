@@ -133,7 +133,7 @@ footer p {
 
 /***** POPUP WINDOW *****/
 
-#modal {
+.modal-section {
   display: none;
   left: 0;
   top: 0;
