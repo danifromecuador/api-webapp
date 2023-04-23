@@ -104,6 +104,7 @@ header {
 .like-btn {
   width: 100%;
   float: right;
+  color: red;
 }
 
 .like-btn:hover {
@@ -162,6 +163,7 @@ footer p {
   display: block;
   width: 2em;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .original-img {

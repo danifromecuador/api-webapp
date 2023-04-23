@@ -2,7 +2,7 @@ function generatePopup(info) {
   return `
     <div id = "modal" class = "modal-section">
         <div id = "modal-content" class = "flex-display modal-cont">
-            <img class = "close-button" id = "close-btn" src = "../../assets/closebtn.png" alt = "close button"/>
+            <span class="close-button" id="close-btn">&#x2716;</span>
             <img class = "original-img" src = "${info.image.original}" alt = ""/>
             <p class = "episode-num">Episode ${info.number}</p>
             <p class = "episode-name">Episode ${info.name}</p>
@@ -41,7 +41,7 @@ function generateMovies(episode, likes) {
         <p>Episode ${episode.number}</p>
         <div class="likes">
           <div class="like-btn-container">
-            <img class="like-btn" src="../../assets/liked.png" alt="unliked">
+            <span class="like-btn">&#x2764;</span>
           </div>
           <p class="like-txt">${likes}</p>
         </div>
