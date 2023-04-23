@@ -1,12 +1,12 @@
 function generatePopup(info) {
   return `
-    <div id = "modal">
-        <div id = "modal-content">
-            <img id = "close-btn" src = "../assets/closebtn.png" alt = "close button"/>
+    <div id = "modal" class = "modal-section">
+        <div id = "modal-content" class = "flex-display modal-cont">
+            <img class = "close-button" id = "close-btn" src = "../../assets/closebtn.png" alt = "close button"/>
             <img class = "original-img" src = "${info.image.original}" alt = ""/>
             <p class = "episode-num">Episode ${info.number}</p>
             <p class = "episode-name">Episode ${info.name}</p>
-            <div class = "info">
+            <div class = "flex-display info">
               <div class = "info-left-col">
                 <p>type: ${info.type}</p>
                 <p>airdate: ${info.airdate}</p>
@@ -18,12 +18,12 @@ function generatePopup(info) {
                 <p>rating: ${info.rating.average}</p>
               </div>
             </div>
-            <div id = "comments">
+            <div class = "comments-section" id = "comments">
             </div>
-            <form id = "add-comment">
+            <form class = "flex-display add_comment" id = "add-comment">
               <p>Add a Comment</p>
-              <input placeholder = "Your name" type = 'text' id = 'name' required/>
-              <input placeholder = "Your comment" type = 'text' id = 'comment-input' required/>
+              <input class = "username" placeholder = "Your name" type = 'text' id = 'name' required/>
+              <input class = "usercomment" placeholder = "Your comment" type = 'text' id = 'comment-input' required/>
               <button type = 'submit' class = 'submit'>Comment<button/>
             </form>
         </div>
@@ -37,11 +37,11 @@ function generateMovies(episode, likes) {
       <div class="episode-img" id="episode-img-${episode.number}">
         <img src="${episode.image.medium}">
       </div>
-      <div class="episode-txt">
+      <div class="flex-display episode-txt">
         <p>Episode ${episode.number}</p>
         <div class="likes">
           <div class="like-btn-container">
-            <img class="like-btn" src="../assets/liked.png" alt="unliked">
+            <img class="like-btn" src="../../assets/liked.png" alt="unliked">
           </div>
           <p class="like-txt">${likes}</p>
         </div>
