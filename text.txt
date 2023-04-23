@@ -1,0 +1,7 @@
+we will use an API to create tv shows and videos webpage
+main url: https://www.tvmaze.com/api
+API url: https://api.tvmaze.com
+endpoints:
+  search:   /search/shows?q=:query
+  example:  https://api.tvmaze.com/search/shows?q=girls
+  show shows: https://api.tvmaze.com/shows

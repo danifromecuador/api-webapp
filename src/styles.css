@@ -1,0 +1,256 @@
+/***** PREREQUISITES *****/
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  padding-inline-start: 0%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(9, 9, 9, 0.76);
+}
+
+.flex-display {
+  display: flex;
+}
+
+/***** HEADER SECTION *****/
+
+.logo {
+  width: 8em;
+  height: 8em;
+}
+
+header {
+  box-shadow: -1px 3px 3px -1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.nav {
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-lists {
+  gap: 3em;
+  align-items: center;
+}
+
+.nav-list {
+  position: relative;
+}
+
+.nav-list a:focus {
+  color: rgb(236, 56, 56);
+}
+
+.nav-list::after {
+  content: '';
+  width: 0%;
+  position: absolute;
+  display: block;
+  transition: 0.5s;
+  background-color: rgb(230, 86, 86);
+}
+
+.nav-list:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+/***** MAIN SECTION *****/
+
+.main-section {
+  width: 80%;
+  position: relative;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.episode-img:hover {
+  cursor: pointer;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-txt {
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.like-btn-container {
+  align-self: flex-end;
+  width: 2em;
+  height: 2em;
+}
+
+.like-btn {
+  width: 100%;
+  float: right;
+  color: red;
+}
+
+.like-btn:hover {
+  cursor: pointer;
+}
+
+.like-txt {
+  margin: 0;
+}
+
+.episode-card {
+  margin-bottom: 2em;
+  box-shadow: -1px 3px 3px -1px rgba(0, 0, 0, 0.7);
+}
+
+/***** FOOTER *****/
+footer {
+  background-color: rgb(87, 245, 98);
+  margin: 0;
+  padding: 1em;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+/***** POPUP WINDOW *****/
+
+.modal-section {
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: rgba(247, 246, 246, 0.796);
+  backdrop-filter: blur(10px);
+}
+
+.modal-section::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-cont {
+  width: 60%;
+  margin: auto;
+  padding: 1em;
+  flex-direction: column;
+  background-color: white;
+}
+
+.close-button {
+  display: block;
+  width: 2em;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.original-img {
+  width: 100%;
+}
+
+.episode-name {
+  text-align: center;
+  margin: 0;
+}
+
+.episode-num {
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+.info {
+  justify-content: space-between;
+}
+
+.info-left-col,
+.info-right-col {
+  width: 50%;
+}
+
+.info-left-col p,
+.info-right-col p {
+  margin: 0;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.info-left-col p:nth-child(even),
+.info-right-col p:nth-child(even) {
+  background-color: rgb(129, 244, 152);
+}
+
+.info-left-col p:nth-child(odd),
+.info-right-col p:nth-child(odd) {
+  background-color: rgb(247, 250, 253);
+}
+
+/***** POPUP COMMENTS *****/
+
+.comments-header {
+  text-align: center;
+  font-weight: 300;
+}
+
+.no-comments {
+  font-weight: 300;
+  font-size: 0.8em;
+}
+
+/***** ITEMS COUNTER *****/
+.episodesCounter {
+  text-align: center;
+  padding: 20px;
+}
+
+/***** FORM STYLING *****/
+
+.add_comment {
+  border-radius: 10px;
+  background-color: rgb(247, 250, 253);
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.username,
+.usercomment {
+  display: block;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.224);
+  padding: 0.4em;
+  margin-bottom: 0.5em;
+  width: 20em;
+}
+
+.submit {
+  background-color: rgb(13, 243, 101);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em;
+  font-size: 1em;
+}
